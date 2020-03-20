@@ -28,6 +28,7 @@ public class ExecuteQuery {
 	 */
 	public ArrayList<HashMap<String, Object>> fetchResult() throws SQLException {
 		ResultSetMetaData md = resultSet.getMetaData();
+		
 		int columns = md.getColumnCount();
 		ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
 		while (resultSet.next()) {
